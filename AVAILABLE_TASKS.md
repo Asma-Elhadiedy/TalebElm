@@ -169,15 +169,6 @@ core rules only. No database code, no web code, no methods with real behavior.
   - **Hint:** `public class DomainException : Exception { public DomainException(string message) : base(message) { } }`
 
 
-- **Task 11: Create ValidationException Class**
-  - **Difficulty:** Very Easy
-  - **Labels:** `good first issue`, `layer:domain`, `exception`
-  - **Location:** `TalebElm.Domain/Exceptions/`
-  - **Instructions:** Create a public class named `ValidationException`. It should
-    inherit from `DomainException`. Add one constructor that takes a
-    `string message` and passes it to the base class. Do not add any methods.
-  - **Hint:** `public class ValidationException : DomainException { public ValidationException(string message) : base(message) { } }`
-
 - **Task 12: Create IRepository Interface**
   - **Difficulty:** Medium
   - **Labels:** `layer:domain`, `interface`, `setup`
