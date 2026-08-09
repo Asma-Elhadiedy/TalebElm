@@ -199,17 +199,6 @@ core rules only. No database code, no web code, no methods with real behavior.
     empty interface is fine.
   - **Hint:** `public interface ITrackRepository : IRepository<Track> { }`
 
-- **Task 15: Create IUnitOfWork Interface**
-  - **Difficulty:** Medium
-  - **Labels:** `layer:domain`, `interface`, `setup`
-  - **Location:** `TalebElm.Domain/Interfaces/`
-  - **Instructions:** Create a public interface named `IUnitOfWork`. It
-    represents one shared database session. It lists other interfaces as
-    properties, which is why it is a bit harder. Add two read-only properties:
-    `Users` (IUserRepository) and `Tracks` (ITrackRepository), plus a
-    `SaveChangesAsync` method signature that returns a Task of int. No bodies.
-  - **Hint:** `public interface IUnitOfWork { IUserRepository Users { get; } ITrackRepository Tracks { get; } Task<int> SaveChangesAsync(); }`
-
 ---
 
 ## Phase 2: Application Layer (Tasks 16-25)
