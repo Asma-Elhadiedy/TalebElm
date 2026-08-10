@@ -293,18 +293,6 @@ classes. The Infrastructure layer talks to the database. These tasks are the
 hardest in the list. They need the Entity Framework Core package and connect to
 several other files. Empty bodies or NotImplementedException are fine.
 
-- **Task 26: Create AppDbContext Class**
-  - **Difficulty:** Medium
-  - **Labels:** `layer:infrastructure`, `database`, `setup`
-  - **Location:** `TalebElm.Infrastructure/Persistence/`
-  - **Instructions:** Create a public class named `AppDbContext`. It should
-    inherit from `DbContext`. Add a constructor that takes
-    `DbContextOptions<AppDbContext>` and passes it to the base class. Do not add
-    logic. The `Microsoft.EntityFrameworkCore` package is required; add it with the
-    command `dotnet add src/TalebElm.Infrastructure package Microsoft.EntityFrameworkCore`.
-    Ask for help if the package install is confusing.
-  - **Hint:** `public class AppDbContext : DbContext { public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { } }`
-
 - **Task 27: Create UserConfiguration Class**
   - **Difficulty:** Medium
   - **Labels:** `layer:infrastructure`, `database`
