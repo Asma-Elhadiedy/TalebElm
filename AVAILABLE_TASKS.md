@@ -284,19 +284,6 @@ the app can do. Here we create empty interfaces and empty DTO records. No logic.
     Task of TrackResponse). No bodies, no logic.
   - **Hint:** `public interface ITrackService { Task<IReadOnlyList<TrackResponse>> GetAllAsync(); Task<TrackResponse> CreateAsync(CreateTrackRequest request); }`
 
-- **Task 25: Create CreateTrackRequestValidator Class**
-  - **Difficulty:** Medium
-  - **Labels:** `layer:application`, `setup`, `validation`
-  - **Location:** `TalebElm.Application/Validators/`
-  - **Instructions:** Create a public class named `CreateTrackRequestValidator`.
-    It should inherit from the FluentValidation class
-    `AbstractValidator<CreateTrackRequest>`. Add an empty constructor. Do not
-    write any validation rules yet. No logic. This one is Medium because it
-    needs the FluentValidation package, which must be added to the project
-    first with the command
-    `dotnet add src/TalebElm.Application package FluentValidation.DependencyInjectionExtensions`.
-  - **Hint:** `public class CreateTrackRequestValidator : AbstractValidator<CreateTrackRequest> { public CreateTrackRequestValidator() { } }`
-
 ---
 
 ## Phase 3: Infrastructure Layer (Tasks 26-35)
