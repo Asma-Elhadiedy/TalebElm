@@ -7,9 +7,9 @@ namespace TalebElm.Api.Controllers
     [ApiController]
     public class ProgressController : ControllerBase
     {
-        [HttpGet("me")] 
-        public IActionResult GetMyProgress() => StatusCode(StatusCodes.Status501NotImplemented); 
-        
+        [HttpGet("me")]
+        public IActionResult GetMyProgress() => StatusCode(StatusCodes.Status501NotImplemented);
+
         [HttpGet("me/tracks/{trackId}")]
         public IActionResult GetByTrack(Guid trackId) => StatusCode(StatusCodes.Status501NotImplemented);
     }
