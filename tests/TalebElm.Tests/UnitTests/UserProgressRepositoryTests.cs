@@ -21,7 +21,9 @@ public class UserProgressRepositoryTests : SqliteTestBase
     public async Task GetByUserAndTrackAsync_ShouldIsolateUsers()
     {
         var trackId = Guid.NewGuid();
+        var track = new Track { Id = trackId, Name = "Track 1", Description = "Description 1" , Status = Domain.Enums.TrackStatus.Published };
         var module = new Module { Id = Guid.NewGuid(), TrackId = trackId, Order = 1, Title = "Module 1" };
+        await DbContext.Tracks.AddAsync(track);
         await DbContext.Modules.AddAsync(module);
 
         var userA = Guid.NewGuid();
@@ -43,6 +45,9 @@ public class UserProgressRepositoryTests : SqliteTestBase
     {
         var trackId = Guid.NewGuid();
         var userId = Guid.NewGuid();
+
+        var track = new Track { Id = trackId, Name = "Track 1", Description = "Description 1" , Status = Domain.Enums.TrackStatus.Published };
+        await DbContext.Tracks.AddAsync(track);
 
         var m1 = new Module { Id = Guid.NewGuid(), TrackId = trackId, Order = 1, Title = "M1" };
         var m2 = new Module { Id = Guid.NewGuid(), TrackId = trackId, Order = 2, Title = "M2" };
